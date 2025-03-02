@@ -3,7 +3,7 @@ import FormTitle from "./FormTitle";
 
 const AuthPage = ({ title, subtitle, formComponent: FormComponent, svgs, linkText, linkTo }) => {
   return (
-    <div className="h-screen grid grid-cols-5">
+    <div className="h-screen grid grid-cols-5 bg-gradient-to-r from-yellow-100 to-yellow-200">
       <div className="col-span-3 h-full relative ">
         {svgs.map((svg, index) => (
           <img
@@ -15,7 +15,7 @@ const AuthPage = ({ title, subtitle, formComponent: FormComponent, svgs, linkTex
         ))}
       </div>
 
-      <div className="col-span-2 flex items-center justify-center h-full bg-white relative">
+      <div className="col-span-2 flex items-center justify-center  h-full bg-white relative">
         <div className="w-4/5 max-w-md">
           <div className="absolute top-6 left-6 flex items-center gap-2">
             <img src="/logo.svg" alt="Logo" className="w-10" />
