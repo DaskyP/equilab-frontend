@@ -1,18 +1,16 @@
-import Sidebar from "../components/Sidebar";
+import Layout from "../components/Layout";
 import MainContent from "../components/MainContent";
 import UserProfile from "../components/UserProfile";
 
 const DashboardPage = () => {
   return (
-    <div className="h-screen w-screen flex bg-gradient-to-r from-yellow-100 to-yellow-400 p-6">
-      <Sidebar />
-
-      <div className="flex flex-1">
-        <MainContent />
-
-        <UserProfile />
+    <Layout>
+      <div className="flex flex-1 p-6 gap-6">
+        <MainContent>
+          <UserProfile />
+        </MainContent>
       </div>
-    </div>
+    </Layout>
   );
 };
 

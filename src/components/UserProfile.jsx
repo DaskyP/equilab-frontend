@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { recentVideos } from "../data/mockData"; // Datos simulados
-import VideoCard from "./VideoCard"; // Componente para los videos
+import { recentVideos } from "../data/mockData"; 
+import VideoCard from "./VideoCard"; 
 
 const UserProfile = () => {
   const [videos, setVideos] = useState([]);
@@ -10,7 +10,7 @@ const UserProfile = () => {
   }, []);
 
   return (
-    <aside className="w-[30rem] p-8 bg-[#F6F2DD] rounded-r-3xl shadow-md flex flex-col">
+    <aside className="w-[30rem] p-8 bg-[#F6F2DD] rounded-3xl shadow-md flex flex-col">
       <div className="flex flex-col items-center mb-8">
         <img src="/image.png" alt="User Avatar" className="w-32 h-32 rounded-full mb-3" />
         <h3 className="text-2xl font-bold text-gray-800">Rodrigo Gogi</h3>
