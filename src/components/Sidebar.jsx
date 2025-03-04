@@ -21,7 +21,7 @@ const Sidebar = () => {
           <img src="/modulos.svg" alt="Módulos" className="w-6 h-6" />
           <span>Módulos</span>
         </Link>
-        <Link to="/estadisticas" className="flex items-center gap-4 text-dark hover:text-green-600">
+        <Link to="/stats" className="flex items-center gap-4 text-dark hover:text-green-600">
           <img src="/stats.svg" alt="Estadísticas" className="w-6 h-6" />
           <span>Estadísticas</span>
         </Link>

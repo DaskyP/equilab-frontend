@@ -5,6 +5,7 @@ import DashboardPage from "./pages/DashboardPage";
 import CoursesPage from "./pages/CoursesPage";
 import Layout from "./components/Layout";
 import ModuleDetailPage from "./components/ModuleDetailPage";
+import StatsPage from "./pages/StatsPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="dashboard" element={<DashboardPage />} />
           <Route path="courses" element={<CoursesPage />} />
           <Route path="modules/:moduleId" element={<ModuleDetailPage />} />
+          <Route path="/stats" element={<StatsPage />} />
         </Route>
       </Routes>
     </Router>
