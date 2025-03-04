@@ -1,10 +1,10 @@
 import { useState } from "react";
 import CourseTable from "./CourseTable";
 import ScoreCard from "./ScoreCard";
-import UserProfile from "./UserProfile"; 
+import UserProfile from "./UserProfile";
 
 const MainContent = () => {
-  const [user, setUser] = useState({
+  const [user] = useState({
     name: "Gogi",
     averageScore: 9.6,
     progress: 34,
@@ -17,28 +17,37 @@ const MainContent = () => {
   });
 
   return (
-    <main className="flex-1 p-6 bg-[#FBFAF4] rounded-3xl min-h-0 overflow-hidden">
-      <div className="grid grid-cols-[2fr_1fr] gap-6 min-h-0 h-full">
-        
-        <div className="flex flex-col space-y-6 overflow-hidden">
-          <h2 className="text-4xl font-semibold">Resumen</h2>
-          <p className="text-gray-500 text-md">Bienvenido de nuevo {user.name}, ¡Sigue aprendiendo!</p>
+    <main className="w-full max-w-screen-xl mx-auto flex flex-col p-6 overflow-hidden">
+      <div>
+        <h2 className="text-4xl font-semibold">Resumen</h2>
+        <p className="text-gray-500 text-md">
+          Bienvenido de nuevo {user.name}, ¡Sigue aprendiendo!
+        </p>
+      </div>
 
-          <div className="grid grid-cols-2 gap-6">
-            <ScoreCard score={user.averageScore} />
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md flex flex-col justify-between">
+      <div className="flex flex-wrap mt-6 gap-6">
+        
+        <div className="flex-1 flex flex-col gap-6 min-w-[60%]">
+          <div className="flex flex-wrap gap-6">
+            <div className="flex-1 min-w-[300px]">
+              <ScoreCard score={user.averageScore} />
+            </div>
+            <div className="bg-gray-100 p-6 rounded-lg shadow-md flex flex-col justify-between w-[20rem]">
               <h3 className="text-lg font-semibold">Módulo 1</h3>
               <p className="text-gray-500 text-sm">Principiante</p>
               <div className="mt-3">
                 <div className="bg-gray-300 w-full h-2 rounded-full relative">
-                  <div className="bg-yellow-500 h-2 rounded-full" style={{ width: `${user.progress}%` }}></div>
+                  <div
+                    className="bg-yellow-500 h-2 rounded-full"
+                    style={{ width: `${user.progress}%` }}
+                  />
                 </div>
                 <p className="text-right text-sm mt-1">{user.progress}% En progreso</p>
               </div>
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md flex-grow min-h-0 overflow-hidden">
+          <div className="bg-white p-6 rounded-lg shadow-md flex-grow min-w-[60%]">
             <div className="flex justify-between items-center">
               <h3 className="text-xl font-semibold">Cursos presentados</h3>
               <a href="#" className="text-yellow-500 font-semibold">View all →</a>
@@ -47,7 +56,9 @@ const MainContent = () => {
           </div>
         </div>
 
-        <UserProfile />
+        <div className="w-full md:w-[25rem]">
+          <UserProfile />
+        </div>
       </div>
     </main>
   );

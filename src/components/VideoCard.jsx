@@ -1,6 +1,6 @@
 const VideoCard = ({ video }) => {
     return (
-      <a href={video.link} className="block bg-white rounded-lg shadow-md overflow-hidden">
+      <a href={video.link} className="block bg-white rounded-lg shdow-md overflow-hidden">
         <img src={video.thumbnail} alt={video.title} className="w-full h-24 object-cover" />
         <div className="p-3">
           <h5 className="text-sm font-semibold">{video.title}</h5>
