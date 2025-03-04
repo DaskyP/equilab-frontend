@@ -3,7 +3,7 @@ import Sidebar from "./Sidebar";
 
 const Layout = () => {
   return (
-<div className="flex h-screen w-full bg-gradient-to-b from-yellow-300 to-yellow-100">
+<div className="flex h-screen w-full bg-gradient-to-b from-yellow-200 to-yellow-100">
   <Sidebar />
 
   <div className="flex-1 p-8 overflow-hidden">
