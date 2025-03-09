@@ -6,6 +6,7 @@ import CoursesPage from "./pages/CoursesPage";
 import Layout from "./components/Layout";
 import ModuleDetailPage from "./components/ModuleDetailPage";
 import StatsPage from "./pages/StatsPage";
+import UserProfilePage from "./pages/UserProfilePage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="courses" element={<CoursesPage />} />
           <Route path="modules/:moduleId" element={<ModuleDetailPage />} />
           <Route path="/stats" element={<StatsPage />} />
+          <Route path="/profile" element={<UserProfilePage />} />
         </Route>
       </Routes>
     </Router>

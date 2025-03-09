@@ -25,7 +25,7 @@ const Sidebar = () => {
           <img src="/stats.svg" alt="Estadísticas" className="w-6 h-6" />
           <span>Estadísticas</span>
         </Link>
-        <Link to="/configuracion" className="flex items-center gap-4 text-dark hover:text-green-600">
+        <Link to="/profile" className="flex items-center gap-4 text-dark hover:text-green-600">
           <img src="/settings.svg" alt="Configuración" className="w-6 h-6" />
           <span>Configuración</span>
         </Link>
